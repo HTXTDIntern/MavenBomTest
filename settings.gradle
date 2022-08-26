@@ -1,16 +1,18 @@
 rootProject.name = 'MavenBomTest'
 
-repositories {
-    maven {
-        // TODO: replace with your own repository URL
-        url 'https://maven.pkg.github.com/HTXTDIntern/MavenBomTest'
-    }
-}
-
 depedencyManagement {
     imports {
         mavenBom "cz.orany:bom-seed:1.0.0"
     }
 }
 
+dependencyResolutionManagement {
+   repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+   repositories {
+      maven {
+        // TODO: replace with your own repository URL
+        url 'https://maven.pkg.github.com/HTXTDIntern/MavenBomTest'
+        }
+    }
+}
 
