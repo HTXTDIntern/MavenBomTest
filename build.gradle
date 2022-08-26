@@ -5,8 +5,10 @@ plugins {
 group 'cz.orany'
 version getTagOrDefault('1.0.0-SNAPSHOT')
 
-dependencies {
-    compile platform("cz.orany:bom-seed:1.0.0")
+depedencyManagement {
+    imports {
+        mavenBom "cz.orany:bom-seed:1.0.0"
+    }
 }
 
 
